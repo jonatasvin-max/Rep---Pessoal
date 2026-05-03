@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Recursos Multimídia — Cap. 4 / Ativ. 4</title>
+</head>
+<body>
+  <header>
+    <h1>Recursos Multimídia — Programação Web 1</h1>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Aula em Vídeo</h2>
+      <figure>
+        <video controls width="800" height="450"
+               poster="poster-video.jpg"
+               preload="metadata">
+          <source src="video/aula-introducao.mp4" type="video/mp4" />
+          <source src="video/aula-introducao.webm" type="video/webm" />
+          <track kind="subtitles" src="legendas/aula-html.vtt"
+                 srclang="pt" label="Português" default />
+          <p>
+            Seu navegador não suporta vídeo HTML5.
+          <a href="video/aula-introducao.mp4">Baixe o vídeo aqui</a>.
+         </p>
+        </video>
+        <figcaption>
+          Introdução ao Html. Fonte: Material da disciplina INTW
+        </figcaption>
+       </figure>
+    </section>
+
+    <section>
+      <h2>Aúdio para atividade</h2>
+      <figure>
+        <audio controls preload="metadata">
+          <source src="podcast-introducaoweb.mp3" type="audio/mpeg" />
+          <source src="podcast-introducaoweb.ogg" type="audio/ogg"  />
+          <p>
+           Seu navegador não suporta áudio HTML5.
+           <a href="podcast-introducaoweb.mp3">Baixe o arquivo de aúdio</a>
+          </p>
+        </audio>
+        <figcaption>
+          Introdução às Tecnologias Web
+          <a href="transcricao.html">Ler transcrição</a>
+        </figcaption>
+       </figure>  
+    </section>
+    
+    <section>
+      <h2>Introdução a Algoritmos</h2>
+      <figure>
+        <iframe 
+         width="800"
+         height="450" 
+         src="https://www.youtube-nocookie.com/embed/8mei6uVttho" 
+         title="Aula introdutória do Curso de Algoritmo ministrada pelo Profº Gustavo Guanabara"  
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+         referrerpolicy="strict-origin-when-cross-origin" 
+         allowfullscreen
+         loading="lazy"
+        ></iframe>
+        <figcaption>
+          Vídeo: Introdução a Algoritmos - Curso de Algoritmos #01 - Gustavo Guanabara |  
+          Canal: Curso em Vídeo |
+          Plataforma: YouTube 
+        </figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Imagem responsiva</h2>
+      <figure>
+        <picture>
+           <source media="(min-width: 768px)" srcset="img/banner-wide.jpg"/>
+            <img
+              src="img/banner-mobile.jpg"
+              alt="Imagem fictícia somente para estruturar a marcação."
+              width="400"
+              height="400"
+            />
+            <figcaption>
+              Uma imagem fictícia com link usado somente para resolver essa atividade, que consiste em estruturar a marcação corretamente.
+            </figcaption>
+        </picture>
+      </figure>
+    </section>
+    </main>
+
+  <footer>
+    <p>
+      Atividade 4 — Capítulo 4 | Programação Web 1 |
+      Aluno: Jônatas Vinícius Oliveira Cardoso | Matrícula: [2026000967] |
+      <time datetime="2026-05-02">Maio de 2026</time>
+    </p>
+    <p><a href="https://jonatasvin-max.github.io/Rep---Pessoal">← Voltar à página principal</a></p>
+  </footer>
+</body>
+</html>
