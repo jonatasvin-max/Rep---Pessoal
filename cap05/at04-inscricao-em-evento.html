@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PWEB1 — Cap. 05 — AT04 — Inscrição em Evento com Campos Avançados</title>
+</head>
+<body>
+ <header>
+    <h1>Inscrição em Evento com Campos Avançados</h1>
+    <p><a href="https://jonatasvin-max.github.io/Rep---Pessoal">← Voltar para a página principal</a></p>
+  </header>
+  <main>
+    <section>
+      <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <legend>Identificação do Participante</legend>
+          <label for="nome">Nome completo:</label>
+          <input type="text" id="nome" name="nome" required/>
+
+          <label for="email">E-mail institucional:</label>
+          <input type="email" id="email" name="email" required/>
+
+          <label for="cidade">Cidade de origem:</label>
+          <input type="text" id="cidade" name="cidade" list="lista_cidades"/>
+          <datalist id="lista_cidades">
+            <option value="Coruripe">
+            <option value="Maceió">
+            <option value="Arapiraca">
+            <option value="Penedo">
+            <option value="Palmeira dos Índios">
+            <option value="Delmiro Gouveia">
+            <option value="União dos Palmares">
+            <option value="São Miguel dos Campos">
+          </datalist>
+
+
+          <label for="foto">Foto para crachá:</label>
+          <input type="file" id="foto" name="foto" accept="image/jpeg,image/png" aria-describedby="foto_ajuda"/>
+          <small id="foto_ajuda">Formatos aceitos: JPG e PNG. Tamanho máximo: 2 MB.</small>
+        </fieldset>
+        <fieldset>
+          <legend>Preferências para o Evento</legend>
+          <label for="chegada">Data e hora preferida para chegada:</label>
+          <input type="datetime-local" id="chegada" name="chegada"/>
+
+          <label for="experiencia">Nível de experiência:<span id="valor-experiencia">5</span>/10</label>
+          <input type="range" id="experiencia"name="experiencia" min="0" max="10" step="1" value="5" oninput="document.getElementById('valor-experiencia').textContent = this.value"/>
+
+          <label for="cor_camiseta">Cor de preferência para a camiseta:</label>
+          <input type="color" id="cor_camiseta" name="cor_camiseta" value="#1a73e8"/>
+        </fieldset>
+        <fieldset>
+          <label for="oficinas">Selecione uma ou mais oficinas:</label>
+          <select id="oficinas" name="oficinas[]" multiple required aria-describedby="dica_oficina" size="4">
+           <option value="desenvolvimento_web">Desenvolvimento Web Moderno</option>
+           <option value="inteligencia_artificial">Inteligência Artificial Aplicada</option>
+           <option value="banco_de_dados">Banco de Dados e Big Data</option>
+           <option value="seguranca_informacao">Segurança da Informação</option>
+           <option value="redes_nuvem">Redes e Computação em Nuvem</option>
+          </select>
+          <small Use Ctrl (ou Cmd no Mac) para selecionar mais de uma oficina.></small>
+        </fieldset>
+        <input type="hidden" name="edicao" value="2026" />
+        <button type="submit">Confirmar inscrição</button>
+      </form>
+    </section>
+    </main>
+</body>
+</html>

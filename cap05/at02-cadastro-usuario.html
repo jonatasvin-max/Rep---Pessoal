@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PWEB1 — Cap. 05 — AT02 — Cadastro de Usuário</title>
+</head>
+<body>
+ <header>
+    <h1>Cadastro de Usuário</h1>
+    <p><a href="https://jonatasvin-max.github.io/Rep---Pessoal">← Voltar para a página principal</a></p>
+  </header>
+  <main>
+    <section>
+      <form action="https://httpbin.org/post" method="post">
+        
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" required minlength="3"/>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="usuario@exemplo.com" required/>
+       
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required minlength="8"/>
+
+        <label for="nascimento">Data de nascimento:</label>
+        <input type="date" id="nascimento" name="nascimento" required>
+
+        <fieldset>
+          <legend>Gênero</legend>
+          <input type="radio" id="masculino" name="genero" value="masculino"/>
+          <label for="masculino">Masculino</label>
+
+          <input type="radio" id="feminino" name="genero" value="feminino"/>
+          <label for="feminino">Feminino</label>
+
+          <input type="radio" id="outro" name="genero" value="outro"/>
+          <label for="outro">Outro</label>
+
+          <input type="radio" id="prefiro_nao_informar" name="genero" value="prefiro_nao_informar"/>
+          <label for="prefiro_nao_informar">Prefiro não informar</label>
+        </fieldset>
+
+        <input type="checkbox" id="sim" name="aceite" value="sim" required />
+        <label for="sim">Aceito os termos de uso</label>
+
+        <button type="submit">Criar conta</button>
+        <button type="reset">Limpar campos</button>
+      </form>
+    </section>
+    </main>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

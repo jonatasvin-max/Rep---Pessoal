@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PWEB1 — Cap. 05 — AT03 — Formulário de Matrícula Acadêmica</title>
+</head>
+<body>
+ <header>
+    <h1>Formulário de Matrícula Acadêmica</h1>
+    <p><a href="https://jonatasvin-max.github.io/Rep---Pessoal">← Voltar para a página principal</a></p>
+  </header>
+  <main>
+    <p><strong>* Campos obrigatórios</strong></p>
+    <section>
+      <h2>Seção 1</h2>
+      <form action="https://httpbin.org/post" method="post">
+        <fieldset>
+          <legend>Dados Pessoais</legend>
+          <label for="nome">Nome completo: *</label>
+          <input type="text" id="nome" name="nome" required minlength="5" maxlength="100"/>
+          
+          <label for="cpf">CPF: *</label>
+          <input type="text" id="cpf" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" title="CPF no formato 000.000.000-00"/>
+
+           
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" name="telefone" pattern="\(\d{2}\)\s\d{4,5}-\d{4}" placeholder="(82) 99999-9999"/>
+
+
+          <label for="email">E-mail: *</label>
+          <input type="email" id="email" name="email" placeholder="usuario@exemplo.com" required/>
+        </fieldset>
+      <h2>Seção 2</h2>
+        <fieldset>
+          <legend>Dados Acadêmicos</legend>
+          <label for="curso">Curso: *</label>
+          <select id="curso" name="curso" required>
+            <option value="">Selecione...</option>
+
+            <optgroup label="Computação">
+             <option value="sistemas_de_informacao">Sistemas de Informação</option>
+             <option value="ciencia_da_computacao">Ciência da Computação</option>
+             <option value="engenharia_da_computacao">Engenharia da Computação</option>
+            </optgroup>
+
+            <optgroup label="Gestão">
+             <option value="administracao">Administração</option>
+             <option value="ciencias_contabeis">Ciências Contábeis</option>
+            </optgroup>
+          </select>
+        </fieldset>
+        
+        <fieldset>
+          <legend>Período</legend>
+          <input type="radio" id="manha" name="periodo" value="manha"/>
+          <label for="manha">Manhã *</label>
+
+          <input type="radio" id="tarde" name="periodo" value="tarde"/>
+          <label for="tarde">Tarde *</label>
+
+          <input type="radio" id="noite" name="periodo" value="noite"/>
+          <label for="noite">Noite *</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Ano de ingresso</legend>
+          <label for="ano_ingresso">Ano de ingresso pretendido: *</label>
+          <input type="number" id="ano_ingresso" name="ano_ingresso" min="2025" max="2030" required/>
+        </fieldset>
+      <h2>Seção 3</h2>
+        <fieldset>
+          <legend>Áreas de Interesse</legend>
+          <input type="checkbox" id="desenvolvimento_web" name="interesses[]" value="desenvolvimento_web"/>
+          <label for="desenvolvimento_web">Desenvolvimento Web</label>
+
+          <input type="checkbox" id="banco_de_dados" name="interesses[]" value="banco_de_dados" />
+          <label for="banco_de_dados">Banco de Dados</label>
+
+          <input type="checkbox" id="inteligencia_artificial" name="interesses[]" value="inteligencia_artificial" />
+          <label for="inteligencia_artificial">Inteligência Artificial</label>
+
+          <input type="checkbox" id="redes" name="interesses[]" value="redes" />
+          <label for="redes">Redes de Computadores</label>
+
+          <input type="checkbox" id="seguranca_da_informacao" name="interesses[]" value="seguranca_da_informacao" />
+          <label for="seguranca_da_informacao">Segurança da Informação</label>
+        </fieldset>
+        
+        <button type="submit">Solicitar matrícula</button>
+        <button type="reset">Limpar formulário</button>
+      </form>
+    </section>
+    </main>
+</body>
+</html>
+
+
+
+
+
+
+     
