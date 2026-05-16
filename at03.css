@@ -1,0 +1,129 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#sec-atributo a[href^="https://"] {
+  color: #008000; 
+}
+
+#sec-atributo a[href^="http://"] {
+  color: #FF0000;
+}  
+
+#sec-atributo a[href^="http://"]::after {
+  content: "⚠"; 
+  color: #FF0000;
+}
+
+#sec-atributo a[href$=".pdf"] {
+  color: #FFA500; 
+}
+
+#sec-atributo a[href$=".pdf"]::after {
+  content: "[PDF]";
+  color: #FFA500;
+}
+
+#sec-atributo a[href^="#"] {
+  font-style: italic;
+  color: #D3D3D3; 
+}
+
+#sec-atributo a[target="_blank"]::after {
+  content: " ↗"; 
+}
+
+#sec-estrutural li:first-child {
+  font-weight: bold;
+}
+
+#sec-estrutural li:last-child {
+  color: #E6E6FA;
+}
+
+#sec-estrutural li:nth-child(even) {
+  background-color: #ADD8E6; 
+}
+
+#sec-estrutural li:nth-child(odd) {
+  background-color: #90EE90; 
+}
+
+#sec-estrutural li:nth-child(3) {
+  border-left: 4px solid #0000FF; 
+}
+
+#sec-estado input:focus {
+  outline: 3px solid #800080; 
+  outline-offset: 2px;
+}
+
+#sec-estado input:disabled {
+  background-color: #D3D3D3;
+  cursor: not-allowed;
+}
+
+#sec-estado input:required {
+  border-left: 3px solid #0000FF; 
+}
+
+#sec-estado input:valid {
+  border-left: 3px solid #008000; 
+}
+
+#sec-estado input:invalid {
+  border: 3px solid #FF0000; 
+}
+
+#sec-estado input[type="checkbox"]:checked + label {
+  font-weight: bold;
+}
+
+#sec-estado button:hover {
+  background-color: #E8632A;
+}
+
+#sec-pseudoelemento .citacao::before {
+  content: "“";
+  color: #FFD700; 
+  font-size: 2rem;
+}
+
+#sec-pseudoelemento .citacao::after {
+  content: "”";
+  color: #FFD700;
+  font-size: 2rem;
+}
+
+#sec-pseudoelemento .obrigatorio::after {
+  content: "*";
+  color: red;
+}
+
+::selection {
+  background-color: burlywood;
+  color: aquamarine;
+}
+
+#sec-pseudoelemento .input-custom::placeholder {
+  color: darkblue;
+  font-style: italic;
+}
+
+#sec-combinadores h3 + p {
+  font-size: 1.5rem;
+  color: aqua;
+}
+
+#sec-combinadores li:not(.ativo) {
+  opacity: 0.5;
+}
+
+#sec-combinadores li.ativo::before {
+  content: "✔ ";
+  font-weight: bold;
+}

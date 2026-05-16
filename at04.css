@@ -1,0 +1,74 @@
+:root {
+  --cor-primaria: #2c3e50;
+  --cor-fundo: #f5f5f5;
+  --cor-texto: #333;
+  --altura-nav: 60px;
+  --espaco-md: 1rem;
+  --espaco-lg: 2rem;
+  --raio-borda: 8px;
+  --raio-circulo: 9999px;
+  --z-nav: 1000;
+  --z-sticky: 100;
+  --z-btn-topo: 999;
+  --z-tooltip: 500;
+}
+
+.nav-fixa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: var(--espaco-md);
+  z-index: var(--z-nav);
+}
+
+main {
+  padding-top: var(--altura-nav);
+}
+
+.titulo-sticky {
+  position: sticky;
+  top: var(--altura-nav);
+  background-color: var(--cor-fundo);
+  border-bottom: 2px solid #ccc;
+  padding: var(--espaco-md);
+  z-index: var(--z-sticky);
+}
+
+.cartao-destaque {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: var(--raio-borda);
+  padding: var(--espaco-md);
+  margin: var(--espaco-md) 0;
+}
+.cartao-destaque .selo {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: crimson;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--raio-circulo);
+}
+
+.btn-topo {
+  position: fixed;
+  bottom: var(--espaco-lg);
+  right: var(--espaco-lg);
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: var(--espaco-md);
+  border-radius: var(--raio-borda);
+  z-index: var(--z-btn-topo);
+}
+
+
+
+
+
+
+  
