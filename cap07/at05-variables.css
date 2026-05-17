@@ -1,0 +1,42 @@
+:root {
+  --cor-primaria: #111111;
+  --cor-secundaria: #222222;
+  --cor-destaque: #ffffff;
+  --cor-sucesso: #00ff88;
+  --cor-erro: #ff4444;
+  --cor-texto: #f5f5f5;
+  --cor-texto-claro: #ffffff;
+  --cor-fundo: #000000;
+  --cor-fundo-alt: #1a1a1a;
+
+  --fonte-base: 'Roboto', sans-serif;
+  --fonte-titulo: 'Montserrat', sans-serif;
+
+  --texto-display: clamp(2rem, 5vw, 4rem);
+  --texto-h1: clamp(1.75rem, 4vw, 3rem);
+  --texto-h2: 1.5rem;
+  --texto-h3: 1.25rem;
+  --texto-base: 1rem;
+  --texto-sm: 0.875rem;
+  --texto-xs: 0.75rem;
+
+  --espaco-xs: 0.25rem;
+  --espaco-sm: 0.5rem;
+  --espaco-md: 1rem;
+  --espaco-lg: 2rem;
+  --espaco-xl: 4rem;
+
+  --raio-sm: 4px;
+  --raio-md: 8px;
+  --raio-lg: 16px;
+  --raio-circulo: 9999px;
+
+  --sombra-sm: 0 1px 3px rgba(255, 255, 255, 0.12);
+  --sombra-md: 0 4px 6px rgba(255, 255, 255, 0.10);
+  --sombra-lg: 0 10px 25px rgba(255, 255, 255, 0.15);
+
+  --transicao: 200ms ease-in-out;
+
+  --largura-max: 1200px;
+  --altura-nav: 60px;
+}
