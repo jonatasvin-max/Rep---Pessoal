@@ -1,0 +1,188 @@
+/* ===========================
+   Reset e Variáveis
+   =========================== */
+@import url('reset.css');
+@import url('variables.css');
+
+/* ===========================
+   Layout Geral
+   =========================== */
+body {
+  font-family: var(--fonte-base);
+  background-color: var(--bg, var(--cor-fundo));
+  color: var(--texto, var(--cor-texto));
+  margin: 0;
+  transition: background-color var(--transicao), color var(--transicao);
+}
+
+/* ===========================
+   Header
+   =========================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--espaco-md);
+  background-color: var(--cor-primaria);
+  color: var(--cor-destaque);
+}
+
+header a {
+  color: var(--cor-destaque);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color var(--transicao);
+}
+
+header a:hover {
+  color: var(--cor-sucesso);
+}
+
+/* ===========================
+   Main + Sidebar
+   =========================== */
+.main-wrapper {
+  display: flex;
+  flex: 1;
+  gap: var(--espaco-md);
+  padding: var(--espaco-md);
+}
+
+.main {
+  flex: 3;
+  background-color: var(--cor-destaque);
+  color: var(--cor-primaria);
+  padding: var(--espaco-md);
+  animation: fadeIn 0.8s ease-in;
+}
+
+.sidebar {
+  flex: 1;
+  background-color: var(--cor-fundo-alt);
+  color: var(--cor-texto);
+  padding: var(--espaco-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-sm);
+  animation: fadeIn 1s ease-in;
+}
+
+.sidebar a {
+  color: var(--cor-destaque);
+  text-decoration: none;
+  transition: color var(--transicao);
+}
+.sidebar a:hover {
+  color: var(--cor-sucesso);
+}
+
+/* ===========================
+   Footer
+   =========================== */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--espaco-md);
+  background-color: var(--cor-secundaria);
+  color: var(--cor-destaque);
+}
+
+/* ===========================
+   Componentes Reutilizáveis
+   =========================== */
+.btn {
+  padding: var(--espaco-sm) var(--espaco-md);
+  border-radius: var(--raio-md);
+  font-family: var(--fonte-base);
+  transition: var(--transicao);
+  cursor: pointer;
+}
+.btn--primario {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+}
+.btn--secundario {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto-claro);
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+.card {
+  background-color: var(--cor-fundo-alt);
+  border-radius: var(--raio-md);
+  padding: var(--espaco-md);
+  box-shadow: var(--sombra-md);
+  transition: transform var(--transicao);
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===========================
+   Acessibilidade
+   =========================== */
+a:focus, button:focus {
+  outline: 2px solid var(--cor-sucesso);
+  outline-offset: 2px;
+}
+
+/* ===========================
+   Responsividade
+   =========================== */
+@media (max-width: 768px) {
+  .main-wrapper {
+    flex-direction: column;
+  }
+  .sidebar {
+    order: -1;
+  }
+}
+
+/* ===========================
+   Modo Claro/Escuro
+   =========================== */
+body.light {
+  --bg: #ffffff;
+  --texto: #000000;
+  --fundo-alt: #f5f5f5;
+}
+
+body {
+  --bg: #000000;
+  --texto: #f5f5f5;
+  --fundo-alt: #1a1a1a;
+}
+
+/* ===========================
+   Animações
+   =========================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===========================
+   Título e Subtítulo minimalistas
+   =========================== */
+h1 {
+  font-family: var(--fonte-titulo);
+  font-size: 2.5rem;
+  text-align: center;
+  margin: var(--espaco-lg) auto var(--espaco-md);
+  color: var(--cor-destaque);
+  font-weight: normal;
+}
+
+h1 + h2 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.6rem;
+  text-align: center;
+  margin: var(--espaco-md) auto var(--espaco-lg);
+  color: var(--cor-texto);
+  font-style: italic;
+  border-top: 1px solid var(--cor-destaque);
+  padding-top: var(--espaco-sm);
+}
