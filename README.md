@@ -43,7 +43,7 @@ Abordagem **mobile-first**, com layout inicial em coluna e adaptação progressi
 ## Capturas de Tela do Projeto
 
 ### Versão Desktop
-![Captura Desktop](assets/images/desktop1.png)
+![Captura Desktop](assets/images/desktop1.png.png)
 
 ### Versão Mobile
-![Captura Mobile](assets/images/mobile.png)
+![Captura Mobile](assets/images/mobile.png.png)
