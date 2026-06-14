@@ -34,7 +34,7 @@ document.getElementById("btnAlterarCurso").addEventListener("click", () => {
 });
 
 document.getElementById("btnAlterarFoto").addEventListener("click", () => {
-  fotoEl.src = "imagens/perfil2.jpg";
+  fotoEl.src = "images/perfil2.jpg";
   atualizarEstatisticas("Alteração de foto");
 });
 
